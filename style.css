@@ -1,4 +1,12 @@
-body, h1 {
+:root {
+    --primary-color: #fafafa;
+    --accent-color: #282828;
+}
+[data-theme='dark'] {
+    --primary-color: #282828;
+    --accent-color: #fafafa;
+}
+* {
     padding: 0;
     margin: 0;
 }
@@ -11,30 +19,18 @@ body, h1 {
     gap: 20px;
     transition: all 1s;
     font-size: 1.6rem;
+    background-color: var(--primary-color);
 }
-.theme-wrapper[data-theme='light'] {
-    background-color: #fafafa;
+.title {
+    color: var(--accent-color);
 }
-.theme-wrapper[data-theme='dark'] {
-    background-color: #282828;
-    color: #fafafa;
-}
-
 .toggle-btn {
     border-radius: 5px;
-    border: 1px solid #000;
+    border: 1px solid var(--accent-color);
     padding: 7px 15px;
     transition: all .3s;
     font-size: 1.2rem;
     cursor: pointer;
-}
-.theme-wrapper[data-theme='light'] .toggle-btn {
-    background-color: #fafafa;
-    color: #000;
-    border-color: #000;
-}
-.theme-wrapper[data-theme='dark'] .toggle-btn {
-    background-color: #000;
-    color: #fafafa;
-    border-color: #fafafa;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
 }
